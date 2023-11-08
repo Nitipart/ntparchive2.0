@@ -10,6 +10,20 @@ const colors = Object.entries(tokens).reduce((acc, [key, value]) => {
   return acc;
 }, {});
 
+colors['pizazz'] = {
+  '50': '#fffbea',
+  '100': '#fff1c5',
+  '200': '#ffe485',
+  '300': '#ffcf46',
+  '400': '#ffb91b',
+  '500': '#ff9500',
+  '600': '#e26e00',
+  '700': '#bb4a02',
+  '800': '#983908',
+  '900': '#7c2f0b',
+  '950': '#481600',
+};
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
@@ -32,6 +46,9 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-urbanist)', ...fontFamily.sans],
+      },
+      boxShadow: {
+        'combined-custom': 'inset 0 4px 4px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.25)',
       },
     },
   },
